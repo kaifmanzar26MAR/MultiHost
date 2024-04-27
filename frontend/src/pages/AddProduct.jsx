@@ -25,7 +25,7 @@ const AddProduct = () => {
     console.log(productData);
     try {
       const response = await axios.post(
-        'http://localhost:5000/product/addproduct',
+        'https://multihost.onrender.com/product/addproduct',
         productData,
         {
           headers: {

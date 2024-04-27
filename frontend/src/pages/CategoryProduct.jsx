@@ -11,7 +11,7 @@ const CategoryProduct = () => {
 
     try {
       const response = await axios.get(
-        `http://localhost:5000/product/getproductswithcategory/${category}`,
+        `https://multihost.onrender.com/product/getproductswithcategory/${category}`,
         { cancelToken: source.token }
       );
       if (response.status != 201) {

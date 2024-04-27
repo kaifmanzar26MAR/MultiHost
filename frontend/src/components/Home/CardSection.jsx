@@ -6,13 +6,13 @@ const CardSection = () => {
   const [categoriesData, setCategoriesData] = useState([]);
   const fetchCategories = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/product/getallproductcategory");
+      const response = await axios.get("https://multihost.onrender.com/product/getallproductcategory");
       const allCategories = response.data.data;
       console.log(allCategories);
   
       const data = await Promise.all(
         allCategories.map(async (category) => {
-          const categoryImageResponse = await axios.get(`http://localhost:5000/product/getproductimagebycategory/${category}`);
+          const categoryImageResponse = await axios.get(`https://multihost.onrender.com/product/getproductimagebycategory/${category}`);
           const categoryImage = categoryImageResponse.data.data; // Assuming you want the actual image data here
           return {
             category,

@@ -8,7 +8,7 @@ const CategorySuggition = (props) => {
     try {
       console.log(props)
         const response = await axios.get(
-          `http://localhost:5000/product/getproductswithcategory/${props.category}`,
+          `https://multihost.onrender.com/product/getproductswithcategory/${props.category}`,
           { cancelToken: source.token }
         );
         if (response.status != 201) {
@@ -27,7 +27,7 @@ const CategorySuggition = (props) => {
     const source = axios.CancelToken.source();
     try {
       const response = await axios.post(
-        "http://localhost:5000/product/addtocart",
+        "https://multihost.onrender.com/product/addtocart",
         {
           product_id,
           quantity:1,

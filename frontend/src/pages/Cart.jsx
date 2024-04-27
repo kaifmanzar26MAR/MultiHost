@@ -14,7 +14,7 @@ const Cart = () => {
       // Map each cart item to a promise of fetching its product
       const productPromises = cart.map(async (e) => {
         const product = await axios.post(
-          "http://localhost:5000/product/getproductbyid",
+          "https://multihost.onrender.com/product/getproductbyid",
           { product_id: e.product_id },
           {
             headers: {
@@ -46,7 +46,7 @@ const Cart = () => {
   const removeFromCart = async (id) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/product/removeproductfromcart",
+        "https://multihost.onrender.com/product/removeproductfromcart",
         { product_id: id },
         {
           headers: {

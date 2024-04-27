@@ -18,7 +18,7 @@ const ProductView = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/product/getproductbyid",
+        "https://multihost.onrender.com/product/getproductbyid",
         { product_id },
         {
           headers: {
@@ -38,7 +38,7 @@ const ProductView = () => {
 
       const reviewsPromises = reviewsArr.map(async (review_id) => {
         const review = await axios.post(
-          "http://localhost:5000/product/getprodcutreviewbyid",
+          "https://multihost.onrender.com/product/getprodcutreviewbyid",
           review_id,
           {
             headers: {
@@ -65,7 +65,7 @@ const ProductView = () => {
     const source = axios.CancelToken.source();
     try {
       const res = await axios.post(
-        "http://localhost:5000/product/addreview",
+        "https://multihost.onrender.com/product/addreview",
         {
           product_id: data._id,
           reviewtext: reviewText,
@@ -96,7 +96,7 @@ const ProductView = () => {
     const source = axios.CancelToken.source();
     try {
       const response = await axios.post(
-        "http://localhost:5000/product/addtocart",
+        "https://multihost.onrender.com/product/addtocart",
         {
           // user_id: "65e4a52a6a691876ff3a2fea",
           product_id: data._id,

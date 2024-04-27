@@ -10,7 +10,7 @@ const Navbar = () => {
   // const fetchUser = async () => {
   //   try {
   //     const response = await axios.get(
-  //       "http://localhost:5000/user/getuserbyid/65e4a52a6a691876ff3a2fea"
+  //       "https://multihost.onrender.com/user/getuserbyid/65e4a52a6a691876ff3a2fea"
   //     );
   //     if (response.status != 201) {
   //       throw new Error("Not getting user response");
@@ -27,7 +27,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const LogoutUser = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/user/logout");
+      const res = await axios.get("https://multihost.onrender.com/user/logout");
       if (res.status != 200) {
         throw new Error("Error in logout");
       }
@@ -65,7 +65,7 @@ const Navbar = () => {
     const fetchProdcuts = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/product/getallproducts", {
+          "https://multihost.onrender.com/product/getallproducts", {
             // cancelToken: source.token
           }
         );

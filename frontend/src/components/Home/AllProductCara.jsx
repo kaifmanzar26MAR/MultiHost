@@ -6,7 +6,7 @@ const AllProductCara = () => {
   const fetchProdcuts = async (source) => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/product/getallproducts", {
+        "https://multihost.onrender.com/product/getallproducts", {
           cancelToken: source.token
         }
       );
@@ -26,7 +26,7 @@ const AllProductCara = () => {
     const source = axios.CancelToken.source();
     try {
       const response = await axios.post(
-        "http://localhost:5000/product/addtocart",
+        "https://multihost.onrender.com/product/addtocart",
         {
           product_id,
           quantity:1,
